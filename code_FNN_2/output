@@ -1,0 +1,56 @@
+2017-12-08 20:04:45.807250: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2017-12-08 20:04:46.678019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:85:00.0
+totalMemory: 10.91GiB freeMemory: 6.11GiB
+2017-12-08 20:04:46.678068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:85:00.0, compute capability: 6.1)
+------------------------------------------------
+{   'batch_size': 64,
+    'beam': 1,
+    'dev': '../data/yelp/sentiment.dev',
+    'dim_emb': 100,
+    'dim_y': 200,
+    'dim_z': 500,
+    'dropout_keep_prob': 0.5,
+    'embedding': '',
+    'filter_sizes': '3,4,5',
+    'gamma_decay': 0.5,
+    'gamma_init': 1,
+    'gamma_min': 0.001,
+    'learning_rate': 0.0001,
+    'load_model': False,
+    'max_epochs': 20,
+    'max_seq_length': 20,
+    'max_train_size': -1,
+    'model': '../tmp/model',
+    'n_filters': 128,
+    'n_layers': 1,
+    'online_testing': False,
+    'output': '../tmp/sentiment.dev',
+    'rho': 1,
+    'steps_per_checkpoint': 1000,
+    'test': '',
+    'train': '../data/yelp/sentiment.train',
+    'vocab': '../tmp/yelp.vocab'}
+------------------------------------------------
+#sents of training file 0: 179218
+#sents of training file 1: 268041
+vocabulary size: 9361
+Creating model with fresh parameters.
+--------------------epoch 1--------------------
+learning_rate: 0.0001   gamma: 1
+step 1000, time 211s, loss 51.99, g 54.48, d 2.49, adv 1.19, 1.33
+Traceback (most recent call last):
+  File "style_transfer.py", line 242, in <module>
+    feed_dict=feed_dict)
+  File "/opt/conda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 889, in run
+    run_metadata_ptr)
+  File "/opt/conda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/opt/conda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1317, in _do_run
+    options, run_metadata)
+  File "/opt/conda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1323, in _do_call
+    return fn(*args)
+  File "/opt/conda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1302, in _run_fn
+    status, run_metadata)
+KeyboardInterrupt
